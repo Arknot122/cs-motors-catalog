@@ -28,7 +28,7 @@ const Header = ({ onWhatsAppClick }: HeaderProps) => {
           </div>
           <Button 
             onClick={() => onWhatsAppClick("Olá! Gostaria de mais informações sobre as motos disponíveis.")}
-            className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-lg"
+            className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg"
           >
             <MessageCircle className="w-4 h-4 mr-2" />
             WhatsApp

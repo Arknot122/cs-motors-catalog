@@ -17,7 +17,7 @@ const CTASection = ({ onWhatsAppClick }: CTASectionProps) => {
         <Button 
           onClick={() => onWhatsAppClick("Olá! Gostaria de falar com um consultor sobre as motos disponíveis.")}
           size="lg"
-          className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white px-8 py-4 text-lg shadow-lg"
+          className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 text-lg shadow-lg"
         >
           <MessageCircle className="w-5 h-5 mr-2" />
           Atendimento via WhatsApp

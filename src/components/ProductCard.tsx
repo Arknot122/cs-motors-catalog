@@ -47,7 +47,7 @@ const ProductCard = ({ motorcycle, onWhatsAppClick }: ProductCardProps) => {
         
         <Button 
           onClick={() => onWhatsAppClick(motorcycle.whatsappText)}
-          className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-lg"
+          className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg"
         >
           <MessageCircle className="w-4 h-4 mr-2" />
           Consultar via WhatsApp

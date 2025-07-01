@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
@@ -15,7 +16,7 @@ const Index = () => {
       installment12: "1.196,00",
       installment18: "980,00",
       image: "/lovable-uploads/a2a4050a-23ec-4aea-8fd1-7a73796d1c3b.png",
-      whatsappText: "Olá, quero saber mais sobre a YAMAHA YS 150 – 24/25"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a YAMAHA YS 150 – 24/25 com 15.752 KM"
     },
     {
       id: 2,
@@ -25,7 +26,7 @@ const Index = () => {
       installment12: "1.053,00",
       installment18: "863,00",
       image: "/lovable-uploads/9cf420ff-b473-49f4-9208-429e0f0a7ca9.png",
-      whatsappText: "Olá, quero saber mais sobre a Honda CG Titan 160 21/21"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Titan 160 21/21 com 3.017 KM"
     },
     {
       id: 3,
@@ -35,7 +36,7 @@ const Index = () => {
       installment12: "1.415,00",
       installment18: "1.160,00",
       image: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=400&h=300&fit=crop",
-      whatsappText: "Olá, quero saber mais sobre a Honda CB 600F Hornet 08/09"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CB 600F Hornet 08/09 com 28.543 KM"
     },
     {
       id: 4,
@@ -45,7 +46,7 @@ const Index = () => {
       installment12: "868,00",
       installment18: "712,00",
       image: "https://images.unsplash.com/photo-1572023597938-88bb7a2b3f58?w=400&h=300&fit=crop",
-      whatsappText: "Olá, quero saber mais sobre a Yamaha Factor 125 19/20"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Yamaha Factor 125 19/20 com 12.486 KM"
     },
     {
       id: 7,
@@ -55,7 +56,7 @@ const Index = () => {
       installment12: "1.018,00",
       installment18: "835,00",
       image: "/lovable-uploads/1abed2dc-a2e0-4617-b4bd-059d2e7c68c4.png",
-      whatsappText: "Olá, quero saber mais sobre a Honda Biz 125 – 22/22"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda Biz 125 – 22/22 com 20.649 KM"
     },
     {
       id: 8,
@@ -65,7 +66,7 @@ const Index = () => {
       installment12: "931,00",
       installment18: "763,00",
       image: "https://images.unsplash.com/photo-1572023597938-88bb7a2b3f58?w=400&h=300&fit=crop",
-      whatsappText: "Olá, quero saber mais sobre a Yamaha YBR Factor 150 – 22/23"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Yamaha YBR Factor 150 – 22/23 com 25.272 KM"
     },
     {
       id: 9,
@@ -75,7 +76,7 @@ const Index = () => {
       installment12: "1.015,00",
       installment18: "823,00",
       image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400&h=300&fit=crop",
-      whatsappText: "Olá, quero saber mais sobre a Honda Biz 125 – 22/23"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda Biz 125 – 22/23 com 11.163 KM"
     },
     {
       id: 10,
@@ -85,7 +86,7 @@ const Index = () => {
       installment12: "1.287,00",
       installment18: "1.055,00",
       image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop",
-      whatsappText: "Olá, quero saber mais sobre a Honda CG Fan 160 – 24/24"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Fan 160 – 24/24 com 8.079 KM"
     },
     {
       id: 11,
@@ -95,7 +96,7 @@ const Index = () => {
       installment12: "1.287,00",
       installment18: "1.055,00",
       image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop",
-      whatsappText: "Olá, quero saber mais sobre a Honda CG Fan 160 24/24"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Fan 160 24/24 com 6.066 KM"
     },
     {
       id: 12,
@@ -105,7 +106,7 @@ const Index = () => {
       installment12: "1.194,00",
       installment18: "978,00",
       image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop",
-      whatsappText: "Olá, quero saber mais sobre a Honda CG Fan 160 – 23/23"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Fan 160 – 23/23 com 18.258 KM"
     },
     {
       id: 13,
@@ -115,7 +116,7 @@ const Index = () => {
       installment12: "1.194,00",
       installment18: "978,00",
       image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop",
-      whatsappText: "Olá, quero saber mais sobre a Honda CG Titan – 23/23"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Titan – 23/23 (0 KM)"
     },
     {
       id: 14,
@@ -125,7 +126,7 @@ const Index = () => {
       installment12: "1.383,00",
       installment18: "1.133,00",
       image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop",
-      whatsappText: "Olá, quero saber mais sobre a Honda CG Fan 160 – 25/25"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Fan 160 – 25/25 (0 KM)"
     },
     {
       id: 15,
@@ -135,11 +136,11 @@ const Index = () => {
       installment12: "688,00",
       installment18: "564,00",
       image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400&h=300&fit=crop",
-      whatsappText: "Olá, quero saber mais sobre a Honda POP 100 – 24/25"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda POP 100 – 24/25 com 38.098 KM"
     }
   ];
 
-  const whatsappNumber = "5511999999999";
+  const whatsappNumber = "5562981660042";
 
   const handleWhatsAppClick = (text: string) => {
     const encodedText = encodeURIComponent(text);
