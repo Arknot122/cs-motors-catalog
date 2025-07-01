@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
@@ -15,7 +14,7 @@ const Index = () => {
       price: "18.995,00",
       installment12: "1.196,00",
       installment18: "980,00",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+      image: "/lovable-uploads/a2a4050a-23ec-4aea-8fd1-7a73796d1c3b.png",
       whatsappText: "Olá, quero saber mais sobre a YAMAHA YS 150 – 24/25"
     },
     {
