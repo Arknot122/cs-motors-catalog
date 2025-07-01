@@ -14,7 +14,7 @@ const Header = ({ onWhatsAppClick }: HeaderProps) => {
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 flex items-center justify-center">
               <img 
-                src="/lovable-uploads/f8b3d4e5-2a1b-4c6d-9e8f-1a2b3c4d5e6f.png" 
+                src="/lovable-uploads/6e249533-e85f-42a3-9af0-710031bbe030.png" 
                 alt="GS Motos Logo" 
                 className="w-full h-full object-contain"
               />

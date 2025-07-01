@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex items-center space-x-3 mb-6 md:mb-0">
             <div className="w-10 h-10 flex items-center justify-center">
               <img 
-                src="/lovable-uploads/f8b3d4e5-2a1b-4c6d-9e8f-1a2b3c4d5e6f.png" 
+                src="/lovable-uploads/6e249533-e85f-42a3-9af0-710031bbe030.png" 
                 alt="GS Motos Logo" 
                 className="w-full h-full object-contain"
               />
