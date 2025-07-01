@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
@@ -28,6 +29,16 @@ const Index = () => {
       installment18: "863,00",
       image: "/lovable-uploads/9cf420ff-b473-49f4-9208-429e0f0a7ca9.png",
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Titan 160 21/21 com 3.017 KM"
+    },
+    {
+      id: 3,
+      name: "Honda CG Titan 160 – 21/22",
+      km: "29.044",
+      price: "16.721,00",
+      installment12: "1.053,00",
+      installment18: "863,00",
+      image: "/lovable-uploads/43a686dc-67c1-4c98-9eba-7813a4fbc2a7.png",
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Titan 160 – 21/22 com 29.044 KM"
     },
     {
       id: 7,
