@@ -24,7 +24,7 @@ const Index = () => {
       price: "16.721,00",
       installment12: "1.053,00",
       installment18: "863,00",
-      image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop",
+      image: "/lovable-uploads/9cf420ff-b473-49f4-9208-429e0f0a7ca9.png",
       whatsappText: "Olá, quero saber mais sobre a Honda CG Titan 160 21/21"
     },
     {
