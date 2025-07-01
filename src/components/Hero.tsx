@@ -1,6 +1,20 @@
+import { motion } from "framer-motion";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+
 const Hero = () => {
-  return <section className="py-16 px-4 text-center bg-gradient-to-r from-gray-50 via-white to-gray-50 text-gray-900">
-      <div className="container mx-auto max-w-4xl">
+  return (
+    <AuroraBackground className="h-auto min-h-screen py-16">
+      <motion.section
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="px-4 text-center text-gray-900 relative z-10"
+      >
+        <div className="container mx-auto max-w-4xl">
         {/* Logo CS MOTOS */}
         <div className="flex justify-center mb-12">
           
@@ -23,7 +37,9 @@ const Hero = () => {
             <span className="text-gray-800">Parcelamento Facilitado</span>
           </div>
         </div>
-      </div>
-    </section>;
+        </div>
+      </motion.section>
+    </AuroraBackground>
+  );
 };
 export default Hero;
