@@ -1,16 +1,14 @@
-
 const Hero = () => {
   return (
     <section className="py-16 px-4 text-center bg-gradient-to-r from-gray-50 via-white to-gray-50 text-gray-900">
       <div className="container mx-auto max-w-4xl">
-        {/* Logo Placeholder */}
+        {/* Logo */}
         <div className="flex justify-center mb-12">
-          <div className="w-48 h-32 md:w-56 md:h-36 lg:w-64 lg:h-40 bg-gray-200 border-2 border-dashed border-gray-400 rounded-xl flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-gray-500 text-sm mb-2">Logo Placeholder</div>
-              <div className="text-gray-400 text-xs">Adicione sua logo aqui</div>
-            </div>
-          </div>
+          <img 
+            src="/lovable-uploads/f3842823-f1b2-40f9-a163-c9eff6201464.png" 
+            alt="GS Motos Logo" 
+            className="w-48 h-32 md:w-56 md:h-36 lg:w-64 lg:h-40 object-contain"
+          />
         </div>
         
         <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-600 via-cyan-600 to-gray-800 bg-clip-text text-transparent">
