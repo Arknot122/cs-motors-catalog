@@ -1,5 +1,4 @@
 
-
 const Hero = () => {
   return (
     <section className="py-16 px-4 text-center bg-gradient-to-r from-gray-50 via-white to-gray-50 text-gray-900">
@@ -7,9 +6,12 @@ const Hero = () => {
         {/* Logo centralizada no topo com tamanhos responsivos otimizados */}
         <div className="flex justify-center mb-12">
           <img 
-            src="/lovable-uploads/5a74a683-d00a-4d01-b03c-f07f4fe6be15.png" 
+            src="/lovable-uploads/07dea66e-429a-40a1-8112-fd26749e4d15.png" 
             alt="GS Motos - Encontre sua próxima moto com facilidade" 
             className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-contain drop-shadow-lg transition-all duration-300 hover:scale-105"
+            onError={(e) => {
+              console.log('Erro ao carregar imagem da logo:', e);
+            }}
           />
         </div>
         
@@ -39,4 +41,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
