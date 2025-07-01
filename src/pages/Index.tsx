@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
@@ -6,7 +5,6 @@ import CTASection from "@/components/CTASection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import UrgencySection from "@/components/UrgencySection";
 
 const Index = () => {
   const motorcycles = [
@@ -143,7 +141,6 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-white to-gray-50">
       <Header onWhatsAppClick={handleWhatsAppClick} />
       <Hero />
-      <UrgencySection />
       
       {/* Products Section */}
       <section id="motos" className="py-16 px-4">
