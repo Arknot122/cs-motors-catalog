@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
@@ -149,7 +148,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-gray-50">
-      <Header onWhatsAppClick={handleWhatsAppClick} />
+      <Header />
       <Hero />
       
       {/* Products Section */}
