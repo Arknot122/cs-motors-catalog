@@ -48,26 +48,6 @@ const Index = () => {
       whatsappText: "Olá, quero saber mais sobre a Yamaha Factor 125 19/20"
     },
     {
-      id: 5,
-      name: "Honda PCX 150 22/23",
-      km: "8.920",
-      price: "14.990,00",
-      installment12: "943,00",
-      installment18: "773,00",
-      image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400&h=300&fit=crop",
-      whatsappText: "Olá, quero saber mais sobre a Honda PCX 150 22/23"
-    },
-    {
-      id: 6,
-      name: "Kawasaki Ninja 300 16/17",
-      km: "18.635",
-      price: "19.800,00",
-      installment12: "1.245,00",
-      installment18: "1.021,00",
-      image: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=400&h=300&fit=crop",
-      whatsappText: "Olá, quero saber mais sobre a Kawasaki Ninja 300 16/17"
-    },
-    {
       id: 7,
       name: "Honda Biz 125 – 22/22",
       km: "20.649",
