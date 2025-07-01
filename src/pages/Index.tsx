@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
@@ -107,7 +106,7 @@ const Index = () => {
       price: "18.963,00",
       installment12: "1.194,00",
       installment18: "978,00",
-      image: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=300&fit=crop",
+      image: "/lovable-uploads/a7735d1a-3da4-4eb7-831e-5af2c9093d7a.png",
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Fan 160 – 23/23 com 18.258 KM"
     },
     {
