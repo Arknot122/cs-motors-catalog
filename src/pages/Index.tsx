@@ -143,7 +143,7 @@ const Index = () => {
       <Hero />
       
       {/* Products Section */}
-      <section id="motos" className="py-16 px-4">
+      <section id="motos" className="py-8 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4 text-gray-900">
