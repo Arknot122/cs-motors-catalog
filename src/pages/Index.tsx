@@ -76,7 +76,7 @@ const Index = () => {
       price: "16.128,00",
       installment12: "1.015,00",
       installment18: "823,00",
-      image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400&h=300&fit=crop",
+      image: "/lovable-uploads/a291c83d-0258-4c54-a261-35ecd0da64bc.png",
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda Biz 125 – 22/23 com 11.163 KM"
     },
     {
