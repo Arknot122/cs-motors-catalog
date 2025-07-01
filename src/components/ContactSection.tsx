@@ -17,13 +17,13 @@ const ContactSection = () => {
           <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-2 hover:border-cyan-200">
             <Mail className="w-8 h-8 text-red-500 mb-4" />
             <h4 className="font-semibold mb-2">Email</h4>
-            <p className="text-gray-600">contato@gsmotos.com.br</p>
+            <p className="text-gray-600">csmotorscanedo@hotmail.com</p>
           </div>
           
           <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-2 hover:border-cyan-200">
             <MapPin className="w-8 h-8 text-red-500 mb-4" />
             <h4 className="font-semibold mb-2">Endereço</h4>
-            <p className="text-gray-600">Rua Exemplo, 123 – Cidade/UF</p>
+            <p className="text-gray-600">Av. Senador Canedo, Quadra 71, Lote 11, Casa III, Vila São Sebastião, Senador Canedo</p>
           </div>
         </div>
       </div>
