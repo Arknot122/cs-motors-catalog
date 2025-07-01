@@ -1,6 +1,5 @@
 
 import { Phone } from "lucide-react";
-import NavigationMenu from "./NavigationMenu";
 
 interface HeaderProps {
   onWhatsAppClick?: (text: string) => void;
@@ -17,9 +16,6 @@ const Header = ({ onWhatsAppClick }: HeaderProps) => {
               CS <span className="text-white text-sm font-medium">MOTOS</span>
             </div>
           </div>
-          
-          {/* Navigation Menu */}
-          <NavigationMenu onWhatsAppClick={onWhatsAppClick} />
           
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
