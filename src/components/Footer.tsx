@@ -7,18 +7,9 @@ const Footer = () => {
     <footer className="bg-gradient-to-r from-gray-900 via-slate-900 to-gray-900 text-white py-12 px-4">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center space-x-3 mb-6 md:mb-0">
-            <div className="w-10 h-10 flex items-center justify-center">
-              <img 
-                src="/lovable-uploads/07dea66e-429a-40a1-8112-fd26749e4d15.png" 
-                alt="GS Motos Logo" 
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div>
-              <h4 className="text-xl font-bold bg-gradient-to-r from-red-400 to-cyan-400 bg-clip-text text-transparent">GS Motos</h4>
-              <p className="text-gray-400 text-sm">Sua confiança, nossa prioridade</p>
-            </div>
+          <div className="mb-6 md:mb-0">
+            <h4 className="text-xl font-bold bg-gradient-to-r from-red-400 to-cyan-400 bg-clip-text text-transparent">GS Motos</h4>
+            <p className="text-gray-400 text-sm">Sua confiança, nossa prioridade</p>
           </div>
           
           <div className="flex space-x-4">
