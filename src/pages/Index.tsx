@@ -66,7 +66,7 @@ const Index = () => {
       price: "14.790,00",
       installment12: "931,00",
       installment18: "763,00",
-      image: "https://images.unsplash.com/photo-1572023597938-88bb7a2b3f58?w=400&h=300&fit=crop",
+      image: "/lovable-uploads/3cf003fd-3754-487a-9822-03bd85d1afa7.png",
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a Yamaha YBR Factor 150 – 22/23 com 25.272 KM"
     },
     {
