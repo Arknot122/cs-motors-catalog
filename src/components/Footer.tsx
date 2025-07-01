@@ -8,8 +8,12 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-3 mb-6 md:mb-0">
-            <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center shadow-lg">
-              <span className="text-lg">🏍️</span>
+            <div className="w-10 h-10 flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/f8b3d4e5-2a1b-4c6d-9e8f-1a2b3c4d5e6f.png" 
+                alt="GS Motos Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h4 className="text-xl font-bold bg-gradient-to-r from-red-400 to-cyan-400 bg-clip-text text-transparent">GS Motos</h4>
