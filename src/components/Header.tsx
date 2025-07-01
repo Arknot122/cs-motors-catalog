@@ -1,18 +1,16 @@
-
 import { Phone } from "lucide-react";
-
 interface HeaderProps {
   onWhatsAppClick?: (text: string) => void;
 }
-
-const Header = ({ onWhatsAppClick }: HeaderProps) => {
-  return (
-    <header className="bg-cs-dark-900 shadow-xl sticky top-0 z-40 border-b border-cs-dark-800">
+const Header = ({
+  onWhatsAppClick
+}: HeaderProps) => {
+  return <header className="bg-cs-dark-900 shadow-xl sticky top-0 z-40 border-b border-cs-dark-800">
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           {/* Logo/Brand */}
           <div className="flex items-center space-x-6">
-            <div className="text-cs-red-500 font-black text-xl tracking-wider transition-colors duration-200 hover:text-cs-red-400">
+            <div className="text-cs-red-500 font-black text-xl tracking-wider transition-colors duration-200 hover:text-cs-red-400 mx-[111px]">
               CS <span className="text-white text-sm font-medium">MOTOS</span>
             </div>
           </div>
@@ -26,8 +24,6 @@ const Header = ({ onWhatsAppClick }: HeaderProps) => {
           </div>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
