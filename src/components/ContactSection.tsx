@@ -11,7 +11,7 @@ const ContactSection = () => {
           <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-2 hover:border-cyan-200">
             <Phone className="w-8 h-8 text-red-500 mb-4" />
             <h4 className="font-semibold mb-2">Telefone</h4>
-            <p className="text-gray-600">(11) 99999-9999</p>
+            <p className="text-gray-600">(62) 9 8166-0042</p>
           </div>
           
           <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-2 hover:border-cyan-200">
