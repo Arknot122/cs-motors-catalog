@@ -10,7 +10,7 @@ const CTASection = ({ onWhatsAppClick }: CTASectionProps) => {
   return (
     <section className="py-8 md:py-16 px-6 md:px-4 bg-gradient-to-r from-red-500 via-red-600 to-red-700 text-white">
       <div className="container mx-auto text-center max-w-2xl">
-        <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">📞 Fale com um Consultor</h3>
+        <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Fale com um Consultor</h3>
         <p className="text-lg md:text-xl mb-6 md:mb-8 text-red-100">
           Se interessou por algum modelo? Fale agora com um de nossos especialistas.
         </p>
