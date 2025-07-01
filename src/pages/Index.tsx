@@ -136,7 +136,7 @@ const Index = () => {
       price: "10.934,00",
       installment12: "688,00",
       installment18: "564,00",
-      image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400&h=300&fit=crop",
+      image: "/lovable-uploads/e5abba61-65c3-439b-af19-80014d2b7a60.png",
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda POP 100 – 24/25 com 38.098 KM"
     }
   ];
