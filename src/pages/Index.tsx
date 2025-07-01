@@ -30,26 +30,6 @@ const Index = () => {
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Titan 160 21/21 com 3.017 KM"
     },
     {
-      id: 3,
-      name: "Honda CB 600F Hornet 08/09",
-      km: "28.543",
-      price: "22.500,00",
-      installment12: "1.415,00",
-      installment18: "1.160,00",
-      image: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=400&h=300&fit=crop",
-      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CB 600F Hornet 08/09 com 28.543 KM"
-    },
-    {
-      id: 4,
-      name: "Yamaha Factor 125 19/20",
-      km: "12.486",
-      price: "13.800,00",
-      installment12: "868,00",
-      installment18: "712,00",
-      image: "https://images.unsplash.com/photo-1572023597938-88bb7a2b3f58?w=400&h=300&fit=crop",
-      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Yamaha Factor 125 19/20 com 12.486 KM"
-    },
-    {
       id: 7,
       name: "Honda Biz 125 – 22/22",
       km: "20.649",
