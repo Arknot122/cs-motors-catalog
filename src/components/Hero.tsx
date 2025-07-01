@@ -1,5 +1,4 @@
 
-
 const Hero = () => {
   return (
     <section className="py-16 px-4 text-center bg-gradient-to-r from-gray-50 via-white to-gray-50 text-gray-900">
