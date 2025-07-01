@@ -143,18 +143,18 @@ const Index = () => {
       <Hero />
       
       {/* Products Section */}
-      <section id="motos" className="py-8 px-4">
+      <section id="motos" className="py-6 md:py-8 px-2 md:px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4 text-gray-900">
+          <div className="text-center mb-8 md:mb-12 px-2">
+            <h3 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-gray-900">
               Modelos Disponíveis
             </h3>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
               Escolha sua moto ideal e fale direto com nosso consultor pelo WhatsApp
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 px-2 md:px-0">
             {motorcycles.map((motorcycle) => (
               <ProductCard 
                 key={motorcycle.id} 
