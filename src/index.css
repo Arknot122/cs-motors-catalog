@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -48,12 +47,12 @@ All colors MUST be HSL.
     --sidebar-border: 0 0% 90%;
     --sidebar-ring: 195 100% 50%;
 
-    /* GS MOTOS Color Palette */
-    --gs-red: 0 87% 60%;
-    --gs-cyan: 195 100% 50%;
-    --gs-white: 0 0% 100%;
-    --gs-dark: 0 0% 8%;
-    --gs-gray: 0 0% 25%;
+    /* CS MOTOS Color Palette */
+    --cs-red: 0 87% 60%;
+    --cs-cyan: 195 100% 50%;
+    --cs-white: 0 0% 100%;
+    --cs-dark: 0 0% 8%;
+    --cs-gray: 0 0% 25%;
   }
 
   .dark {

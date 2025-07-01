@@ -21,7 +21,7 @@ const Header = ({ onWhatsAppClick }: HeaderProps) => {
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-6">
             <h1 className="text-xl font-bold bg-gradient-to-r from-red-400 to-cyan-400 bg-clip-text text-transparent">
-              GS Motos
+              CS Motos
             </h1>
             
             <nav className="hidden md:flex space-x-6">

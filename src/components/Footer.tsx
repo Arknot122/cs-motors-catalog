@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <h4 className="text-xl font-bold bg-gradient-to-r from-red-400 to-cyan-400 bg-clip-text text-transparent">GS Motos</h4>
+            <h4 className="text-xl font-bold bg-gradient-to-r from-red-400 to-cyan-400 bg-clip-text text-transparent">CS Motos</h4>
             <p className="text-gray-400 text-sm">Sua confiança, nossa prioridade</p>
           </div>
           
@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>© 2025 GS Motos. Todos os direitos reservados.</p>
+          <p>© 2025 CS Motos. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
