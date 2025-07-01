@@ -4,6 +4,8 @@ import ProductCard from "@/components/ProductCard";
 import CTASection from "@/components/CTASection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import UrgencySection from "@/components/UrgencySection";
 
 const Index = () => {
   const motorcycles = [
@@ -148,15 +150,21 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-gray-50">
-      <Header />
+      <Header onWhatsAppClick={handleWhatsAppClick} />
       <Hero />
+      <UrgencySection />
       
       {/* Products Section */}
-      <section className="py-16 px-4">
+      <section id="motos" className="py-16 px-4">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold text-center mb-12 text-gray-900">
-            📋 Modelos Disponíveis
-          </h3>
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4 text-gray-900">
+              📋 Modelos Disponíveis
+            </h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Escolha sua moto ideal e fale direto com nosso consultor pelo WhatsApp
+            </p>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {motorcycles.map((motorcycle) => (
@@ -173,6 +181,9 @@ const Index = () => {
       <CTASection onWhatsAppClick={handleWhatsAppClick} />
       <ContactSection />
       <Footer />
+      
+      {/* Botão WhatsApp Flutuante */}
+      <FloatingWhatsApp onWhatsAppClick={handleWhatsAppClick} />
     </div>
   );
 };
