@@ -10,11 +10,7 @@ const Header = ({
         <div className="flex justify-between items-center">
           {/* Logo/Brand */}
           <div className="flex items-center space-x-6">
-            <img 
-              src="/lovable-uploads/5750d438-35f0-454c-b1e8-d0ce84673fbf.png" 
-              alt="CS MOTOS Logo" 
-              className="h-8 w-auto md:h-10 mx-[111px]"
-            />
+            <img alt="CS MOTOS Logo" src="/lovable-uploads/ce171b81-5cd1-4518-a2bb-be2bbd8d2edc.png" className="h-8 w-auto md:h-10 mx-[111px] object-contain" />
           </div>
           
           {/* Contact Info */}
