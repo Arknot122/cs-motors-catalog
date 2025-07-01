@@ -1,4 +1,5 @@
 
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -127,7 +128,6 @@ const ProductCard = ({ motorcycle, onWhatsAppClick }: ProductCardProps) => {
             <p className="text-sm text-cs-dark-700 mb-1 font-medium">
               <strong className="text-cs-red-600">12x</strong> R$ {motorcycle.installment12} ou <strong className="text-cs-red-600">18x</strong> R$ {motorcycle.installment18}
             </p>
-            <p className="text-xs text-gray-500">*Entrada + parcelas</p>
           </div>
         </div>
         
@@ -149,3 +149,4 @@ const ProductCard = ({ motorcycle, onWhatsAppClick }: ProductCardProps) => {
 };
 
 export default ProductCard;
+
