@@ -1,10 +1,14 @@
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
-import CTASection from "@/components/CTASection";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import SkeletonCard from "@/components/ui/skeleton-card";
+
+// Lazy load heavy components
+const CTASection = lazy(() => import("@/components/CTASection"));
+const ContactSection = lazy(() => import("@/components/ContactSection"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
   const motorcycles = [
@@ -155,20 +159,34 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 px-2 md:px-0">
-            {motorcycles.map((motorcycle) => (
-              <ProductCard 
-                key={motorcycle.id} 
-                motorcycle={motorcycle} 
-                onWhatsAppClick={handleWhatsAppClick} 
-              />
-            ))}
+            <Suspense fallback={
+              <>
+                {Array.from({length: 6}).map((_, i) => (
+                  <SkeletonCard key={i} />
+                ))}
+              </>
+            }>
+              {motorcycles.map((motorcycle) => (
+                <ProductCard 
+                  key={motorcycle.id} 
+                  motorcycle={motorcycle} 
+                  onWhatsAppClick={handleWhatsAppClick} 
+                />
+              ))}
+            </Suspense>
           </div>
         </div>
       </section>
 
-      <CTASection onWhatsAppClick={handleWhatsAppClick} />
-      <ContactSection />
-      <Footer />
+      <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse" />}>
+        <CTASection onWhatsAppClick={handleWhatsAppClick} />
+      </Suspense>
+      <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse" />}>
+        <ContactSection />
+      </Suspense>
+      <Suspense fallback={<div className="h-24 bg-gray-100 animate-pulse" />}>
+        <Footer />
+      </Suspense>
       
       {/* Botão WhatsApp Flutuante */}
       <FloatingWhatsApp onWhatsAppClick={handleWhatsAppClick} />

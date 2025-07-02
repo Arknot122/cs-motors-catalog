@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Instagram, Facebook } from "lucide-react";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 const Footer = () => {
   return (
@@ -8,7 +9,14 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0 flex flex-col items-center md:items-start">
-            <img src="/lovable-uploads/febb1070-4d04-49f9-955e-11464a17b4fa.png" alt="CS Motos Logo" className="h-12 w-auto object-contain mx-auto md:mx-0" />
+            <OptimizedImage 
+              src="/lovable-uploads/febb1070-4d04-49f9-955e-11464a17b4fa.png" 
+              alt="CS Motos Logo" 
+              className="h-12 w-auto object-contain mx-auto md:mx-0" 
+              width={120}
+              height={48}
+              priority
+            />
             <p className="text-muted-foreground text-sm mt-2 text-center md:text-left">Sua confiança, nossa prioridade</p>
           </div>
           

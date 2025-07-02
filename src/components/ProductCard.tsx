@@ -4,7 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MessageCircle, Zap, Star } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, memo } from "react";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 interface Motorcycle {
   id: number;
@@ -22,30 +23,8 @@ interface ProductCardProps {
   onWhatsAppClick: (text: string) => void;
 }
 
-const ProductCard = ({ motorcycle, onWhatsAppClick }: ProductCardProps) => {
+const ProductCard = memo(({ motorcycle, onWhatsAppClick }: ProductCardProps) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  // Lazy loading observer
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const handleWhatsAppClick = async () => {
     setIsLoading(true);
@@ -62,9 +41,7 @@ const ProductCard = ({ motorcycle, onWhatsAppClick }: ProductCardProps) => {
   const isLowKm = parseInt(motorcycle.km.replace(/\./g, '')) < 15000;
 
   return (
-    <Card 
-      ref={cardRef}
-      className="overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 border-2 hover:border-cs-red-200 relative group animate-fade-in"
+    <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 border-2 hover:border-cs-red-200 relative group animate-fade-in"
     >
       {/* Badges de destaque */}
       <div className="absolute top-2 md:top-3 left-2 md:left-3 z-10 flex flex-col gap-1 md:gap-2">
@@ -88,25 +65,13 @@ const ProductCard = ({ motorcycle, onWhatsAppClick }: ProductCardProps) => {
       </div>
 
       <div className="relative overflow-hidden">
-        {/* Placeholder enquanto a imagem não carrega */}
-        {!imageLoaded && isInView && (
-          <div className="w-full h-40 md:h-48 bg-gray-200 animate-pulse flex items-center justify-center">
-            <div className="text-gray-400 text-xs md:text-sm">Carregando...</div>
-          </div>
-        )}
-        
-        {/* Imagem com lazy loading */}
-        {isInView && (
-          <img 
-            src={motorcycle.image} 
-            alt={motorcycle.name}
-            className={`w-full h-40 md:h-48 object-cover transition-all duration-500 group-hover:scale-105 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
-            onLoad={() => setImageLoaded(true)}
-            loading="lazy"
-          />
-        )}
+        <OptimizedImage
+          src={motorcycle.image}
+          alt={motorcycle.name}
+          className="w-full h-40 md:h-48 object-cover transition-all duration-500 group-hover:scale-105"
+          width={400}
+          height={300}
+        />
         
         <div className="absolute top-2 md:top-3 right-2 md:right-3 bg-gradient-to-r from-cs-dark-800 to-cs-dark-900 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold shadow-lg backdrop-blur-sm">
           {motorcycle.km === "0" ? "0 KM" : `${motorcycle.km} KM`}
@@ -146,7 +111,9 @@ const ProductCard = ({ motorcycle, onWhatsAppClick }: ProductCardProps) => {
       </CardContent>
     </Card>
   );
-};
+});
+
+ProductCard.displayName = "ProductCard";
 
 export default ProductCard;
 
