@@ -13,7 +13,7 @@ const Header = ({
           
           {/* Centered Logo */}
           <div className="flex justify-center">
-            <img alt="CS MOTOS Logo" src="/lovable-uploads/5750d438-35f0-454c-b1e8-d0ce84673fbf.png" className="h-12 md:h-16 w-auto object-contain" />
+            <img alt="CS MOTOS Logo" src="/lovable-uploads/ab727843-415e-4a73-808c-b54e53886e50.png" className="h-12 md:h-16 w-auto object-contain" />
           </div>
           
           {/* Contact Info */}
