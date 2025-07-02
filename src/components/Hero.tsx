@@ -13,7 +13,7 @@ const Hero = () => {
       delay: 0.3,
       duration: 0.8,
       ease: "easeInOut"
-    }} className="px-3 md:px-4 text-center text-foreground relative z-10 flex flex-col items-center justify-center min-h-screen -mt-16 md:-mt-20">
+    }} className="px-3 md:px-4 text-center text-foreground relative z-10 flex flex-col items-center justify-center min-h-[70vh] -mt-16 md:-mt-20">
         <div className="container mx-auto max-w-5xl px-2 md:px-4">
           {/* Logo CS MOTOS */}
           <motion.div className="flex justify-center mb-8 md:mb-12" initial={{
