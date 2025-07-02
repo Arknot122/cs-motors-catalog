@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <h4 className="text-xl font-bold text-primary">CS Motos</h4>
-            <p className="text-muted-foreground text-sm">Sua confiança, nossa prioridade</p>
+            <img src="/lovable-uploads/febb1070-4d04-49f9-955e-11464a17b4fa.png" alt="CS Motos Logo" className="h-12 w-auto object-contain" />
+            <p className="text-muted-foreground text-sm mt-2">Sua confiança, nossa prioridade</p>
           </div>
           
           <div className="flex space-x-4">
