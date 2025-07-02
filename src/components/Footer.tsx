@@ -4,25 +4,25 @@ import { Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-gray-900 via-slate-900 to-gray-900 text-white py-12 px-4">
+    <footer className="bg-secondary text-secondary-foreground py-12 px-4">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <h4 className="text-xl font-bold bg-gradient-to-r from-red-400 to-cyan-400 bg-clip-text text-transparent">CS Motos</h4>
-            <p className="text-gray-400 text-sm">Sua confiança, nossa prioridade</p>
+            <h4 className="text-xl font-bold text-primary">CS Motos</h4>
+            <p className="text-muted-foreground text-sm">Sua confiança, nossa prioridade</p>
           </div>
           
           <div className="flex space-x-4">
-            <Button variant="ghost" size="sm" className="text-gray-400 hover:text-cyan-400 transition-colors">
+            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary transition-colors">
               <Instagram className="w-5 h-5" />
             </Button>
-            <Button variant="ghost" size="sm" className="text-gray-400 hover:text-cyan-400 transition-colors">
+            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary transition-colors">
               <Facebook className="w-5 h-5" />
             </Button>
           </div>
         </div>
         
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
           <p>© 2025 CS Motos. Todos os direitos reservados.</p>
         </div>
       </div>
