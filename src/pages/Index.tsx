@@ -1,8 +1,9 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState, useCallback } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import SearchAndFilter from "@/components/SearchAndFilter";
 import SkeletonCard from "@/components/ui/skeleton-card";
 
 // Lazy load heavy components
@@ -11,6 +12,8 @@ const ContactSection = lazy(() => import("@/components/ContactSection"));
 const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
+  const [filteredMotorcycles, setFilteredMotorcycles] = useState<typeof motorcycles>([]);
+  
   const motorcycles = [
     {
       id: 1,
@@ -136,10 +139,14 @@ const Index = () => {
 
   const whatsappNumber = "5562981660042";
 
-  const handleWhatsAppClick = (text: string) => {
+  const handleWhatsAppClick = useCallback((text: string) => {
     const encodedText = encodeURIComponent(text);
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedText}`, '_blank');
-  };
+  }, [whatsappNumber]);
+
+  const handleFilteredResults = useCallback((filtered: typeof motorcycles) => {
+    setFilteredMotorcycles(filtered);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-gray-50">
@@ -153,10 +160,16 @@ const Index = () => {
             <h3 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-gray-900">
               Modelos Disponíveis
             </h3>
-            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-8">
               Escolha sua moto ideal e fale direto com nosso consultor pelo WhatsApp
             </p>
           </div>
+          
+          {/* Search and Filter */}
+          <SearchAndFilter 
+            motorcycles={motorcycles}
+            onFilteredResults={handleFilteredResults}
+          />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 px-2 md:px-0">
             <Suspense fallback={
@@ -166,7 +179,7 @@ const Index = () => {
                 ))}
               </>
             }>
-              {motorcycles.map((motorcycle) => (
+              {(filteredMotorcycles.length > 0 ? filteredMotorcycles : motorcycles).map((motorcycle) => (
                 <ProductCard 
                   key={motorcycle.id} 
                   motorcycle={motorcycle} 
@@ -175,6 +188,16 @@ const Index = () => {
               ))}
             </Suspense>
           </div>
+          
+          {filteredMotorcycles.length === 0 && motorcycles.length > 0 && (
+            <div className="text-center py-12">
+              <div className="text-6xl mb-4">🔍</div>
+              <h4 className="text-xl font-semibold mb-2">Nenhuma moto encontrada</h4>
+              <p className="text-muted-foreground">
+                Tente ajustar os filtros ou buscar por outros termos
+              </p>
+            </div>
+          )}
         </div>
       </section>
 

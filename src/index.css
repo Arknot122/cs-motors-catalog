@@ -122,8 +122,27 @@ All colors MUST be HSL.
     @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
   }
 
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
+
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
   @keyframes blink {
     0%, 50% { border-color: #FF3333; }
     51%, 100% { border-color: transparent; }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: calc(200px + 100%) 0; }
+  }
+
+  .loading-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background-size: 200px 100%;
+    animation: shimmer 1.5s infinite;
   }
 }

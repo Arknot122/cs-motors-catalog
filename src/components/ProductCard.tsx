@@ -32,7 +32,7 @@ const ProductCard = memo(({ motorcycle, onWhatsAppClick }: ProductCardProps) => 
     setTimeout(() => {
       onWhatsAppClick(motorcycle.whatsappText);
       setIsLoading(false);
-    }, 500);
+    }, 300);
   };
 
   // Lógica para badges especiais
@@ -41,7 +41,7 @@ const ProductCard = memo(({ motorcycle, onWhatsAppClick }: ProductCardProps) => 
   const isLowKm = parseInt(motorcycle.km.replace(/\./g, '')) < 15000;
 
   return (
-    <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 border-2 hover:border-cs-red-200 relative group animate-fade-in"
+    <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 border-2 hover:border-primary/30 relative group animate-fade-in bg-card"
     >
       {/* Badges de destaque */}
       <div className="absolute top-2 md:top-3 left-2 md:left-3 z-10 flex flex-col gap-1 md:gap-2">
@@ -99,10 +99,19 @@ const ProductCard = memo(({ motorcycle, onWhatsAppClick }: ProductCardProps) => 
         <Button 
           onClick={handleWhatsAppClick}
           disabled={isLoading}
-          className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg text-sm md:text-base py-3 md:py-6 font-semibold transition-all duration-200 hover:shadow-xl transform hover:scale-[1.02]"
+          className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg text-sm md:text-base py-3 md:py-6 font-semibold transition-all duration-300 hover:shadow-xl transform hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
         >
-          <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
-          {isLoading ? "Conectando..." : "CONSULTAR AGORA"}
+          {isLoading ? (
+            <div className="flex items-center">
+              <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2"></div>
+              Conectando...
+            </div>
+          ) : (
+            <>
+              <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
+              CONSULTAR AGORA
+            </>
+          )}
         </Button>
         
         <p className="text-xs text-center text-gray-500 mt-2 md:mt-3 font-medium">
