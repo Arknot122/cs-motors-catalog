@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import SearchAndFilter from "@/components/SearchAndFilter";
+import SearchOnly from "@/components/SearchOnly";
 import SkeletonCard from "@/components/ui/skeleton-card";
 
 // Lazy load heavy components
@@ -165,8 +165,8 @@ const Index = () => {
             </p>
           </div>
           
-          {/* Search and Filter */}
-          <SearchAndFilter 
+          {/* Search Only */}
+          <SearchOnly 
             motorcycles={motorcycles}
             onFilteredResults={handleFilteredResults}
           />
