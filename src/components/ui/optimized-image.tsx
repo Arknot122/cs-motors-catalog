@@ -81,7 +81,7 @@ const OptimizedImage = ({
           width={width}
           height={height}
           className={cn(
-            "transition-opacity duration-300",
+            "transition-opacity duration-300 object-cover object-center w-full h-full",
             isLoaded ? "opacity-100" : "opacity-0",
             hasError && "hidden"
           )}
