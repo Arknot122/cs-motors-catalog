@@ -22,7 +22,7 @@ const Index = () => {
       price: "18.995,00",
       installment12: "1.196,00",
       installment18: "980,00",
-      image: "/lovable-uploads/eb1f556d-daf1-4852-bbb7-e3d42b72b0f0.png",
+      image: "/lovable-uploads/6d509b8d-0dfe-491a-bad2-b57f6c3ea2ee.png",
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a YAMAHA YS 150 – 24/25 com 15.752 KM"
     },
     {
