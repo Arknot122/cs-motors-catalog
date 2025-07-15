@@ -83,18 +83,6 @@ const ProductCard = memo(({ motorcycle, onWhatsAppClick }: ProductCardProps) => 
           {motorcycle.name}
         </h4>
         
-        <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
-          <div className="bg-gradient-to-r from-cs-red-50 to-red-100 p-2 md:p-4 rounded-lg border-l-4 border-cs-red-500 shadow-sm">
-            <p className="text-lg md:text-2xl font-bold text-gradient-cs">
-              À vista: R$ {motorcycle.price}
-            </p>
-          </div>
-          <div className="bg-gray-50 p-2 md:p-3 rounded-lg border border-gray-200">
-            <p className="text-xs md:text-sm text-cs-dark-700 mb-1 font-medium">
-              <strong className="text-cs-red-600">12x</strong> R$ {motorcycle.installment12} ou <strong className="text-cs-red-600">18x</strong> R$ {motorcycle.installment18}
-            </p>
-          </div>
-        </div>
         
         <Button 
           onClick={handleWhatsAppClick}
