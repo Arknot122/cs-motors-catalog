@@ -1,10 +1,11 @@
-import { lazy, Suspense, useState, useCallback } from "react";
+import { lazy, Suspense, useState, useCallback, useMemo } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import SearchOnly from "@/components/SearchOnly";
 import SkeletonCard from "@/components/ui/skeleton-card";
+import { usePerformanceMonitoring } from "@/hooks/use-performance";
 
 // Lazy load heavy components
 const CTASection = lazy(() => import("@/components/CTASection"));
@@ -14,7 +15,11 @@ const Footer = lazy(() => import("@/components/Footer"));
 const Index = () => {
   const [filteredMotorcycles, setFilteredMotorcycles] = useState<typeof motorcycles>([]);
   
-  const motorcycles = [
+  // Performance monitoring
+  usePerformanceMonitoring();
+  
+  // Memoize motorcycle data to prevent unnecessary re-computations
+  const motorcycles = useMemo(() => [
     {
       id: 1,
       name: "YAMAHA YS 150 – 24/25",
@@ -135,7 +140,7 @@ const Index = () => {
       image: "/lovable-uploads/e5abba61-65c3-439b-af19-80014d2b7a60.png",
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda POP 100 – 24/25 com 38.098 KM"
     }
-  ];
+  ], []);
 
   const whatsappNumber = "5562981660042";
 

@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MessageCircle, Zap, Star } from "lucide-react";
-import { useState, useRef, useEffect, memo } from "react";
+import { useState, useCallback, memo } from "react";
 import OptimizedImage from "@/components/ui/optimized-image";
 
 interface Motorcycle {
@@ -26,14 +26,14 @@ interface ProductCardProps {
 const ProductCard = memo(({ motorcycle, onWhatsAppClick }: ProductCardProps) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleWhatsAppClick = async () => {
+  const handleWhatsAppClick = useCallback(async () => {
     setIsLoading(true);
     
     setTimeout(() => {
       onWhatsAppClick(motorcycle.whatsappText);
       setIsLoading(false);
     }, 300);
-  };
+  }, [motorcycle.whatsappText, onWhatsAppClick]);
 
   // Lógica para badges especiais
   const isHighlight = motorcycle.id <= 3;

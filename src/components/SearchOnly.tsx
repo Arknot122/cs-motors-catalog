@@ -1,6 +1,7 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import { useDebounce } from "@/hooks/use-debounce";
 
 interface Motorcycle {
   id: number;
@@ -20,23 +21,31 @@ interface SearchOnlyProps {
 
 const SearchOnly = ({ motorcycles, onFilteredResults }: SearchOnlyProps) => {
   const [searchTerm, setSearchTerm] = useState('');
+  
+  // Debounce search term to reduce processing
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
 
   const filteredMotorcycles = useMemo(() => {
     let filtered = motorcycles;
 
     // Search filter only
-    if (searchTerm) {
+    if (debouncedSearchTerm) {
       filtered = filtered.filter(moto =>
-        moto.name.toLowerCase().includes(searchTerm.toLowerCase())
+        moto.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase())
       );
     }
 
     return filtered;
-  }, [motorcycles, searchTerm]);
+  }, [motorcycles, debouncedSearchTerm]);
 
-  React.useEffect(() => {
+  // Memoize the callback to prevent infinite re-renders
+  const handleFilteredResults = useCallback(() => {
     onFilteredResults(filteredMotorcycles);
   }, [filteredMotorcycles, onFilteredResults]);
+
+  React.useEffect(() => {
+    handleFilteredResults();
+  }, [handleFilteredResults]);
 
   return (
     <div className="mb-8">
@@ -56,7 +65,7 @@ const SearchOnly = ({ motorcycles, onFilteredResults }: SearchOnlyProps) => {
       {/* Results Counter */}
       <div className="mt-4 text-sm text-muted-foreground">
         {filteredMotorcycles.length} {filteredMotorcycles.length === 1 ? 'moto encontrada' : 'motos encontradas'}
-        {searchTerm && (
+        {debouncedSearchTerm && (
           <span> de {motorcycles.length} total</span>
         )}
       </div>
