@@ -161,11 +161,11 @@ const Index = () => {
       {/* Products Section */}
       <section id="motos" className="pt-0 pb-2 md:pb-4 px-2 md:px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-8 md:mb-12 px-2">
+          <div className="text-center mb-4 md:mb-6 px-2">
             <h3 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-gray-900">
               Modelos Disponíveis
             </h3>
-            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-4">
               Escolha sua moto ideal e fale direto com nosso consultor pelo WhatsApp
             </p>
           </div>

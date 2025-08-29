@@ -16,7 +16,7 @@ const Hero = () => {
     }} className="px-3 md:px-4 text-center text-foreground relative z-10 flex flex-col items-center justify-center min-h-[70vh] -mt-16 md:-mt-20">
         <div className="container mx-auto max-w-5xl px-2 md:px-4">
           {/* Logo CS MOTOS */}
-          <motion.div className="flex justify-center mb-4 md:mb-6" initial={{
+          <motion.div className="flex justify-center mb-2 md:mb-3" initial={{
           opacity: 0,
           scale: 0.8
         }} animate={{
@@ -30,7 +30,7 @@ const Hero = () => {
           </motion.div>
           
           {/* Main Hero Text with Typewriter Effect */}
-          <motion.div className="mb-4 md:mb-6" initial={{
+          <motion.div className="mb-2 md:mb-3" initial={{
           opacity: 0
         }} animate={{
           opacity: 1
