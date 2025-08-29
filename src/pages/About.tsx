@@ -72,7 +72,7 @@ const About = () => {
                 onClick={() => handleWhatsAppClick("Olá! Vim do site e gostaria de conhecer mais sobre a CS Motos.")}
                 className="bg-cs-red-500 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-cs-red-600 transition-colors duration-300"
               >
-                Fale Conosco
+                CONSULTAR AGORA
               </button>
             </div>
           </div>

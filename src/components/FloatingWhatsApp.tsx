@@ -16,7 +16,7 @@ const FloatingWhatsApp = ({ onWhatsAppClick }: FloatingWhatsAppProps) => {
         aria-label="Consultar Agora"
       >
         <MessageCircle className="w-6 h-6 mr-2" />
-        <span className="text-sm font-semibold">Consultar Agora</span>
+        <span className="text-sm font-semibold">CONSULTAR AGORA</span>
       </Button>
       
       {/* Tooltip */}

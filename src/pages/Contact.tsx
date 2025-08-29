@@ -50,7 +50,7 @@ const Contact = () => {
                         onClick={() => handleWhatsAppClick("Olá! Vim do site e gostaria de mais informações.")}
                         className="text-cs-red-500 hover:text-cs-red-600 font-medium mt-1"
                       >
-                        Enviar mensagem →
+                        CONSULTAR AGORA
                       </button>
                     </div>
                   </div>
@@ -89,14 +89,14 @@ const Contact = () => {
                     onClick={() => handleWhatsAppClick("Olá! Gostaria de ver as motos disponíveis no estoque.")}
                     className="w-full bg-white text-cs-red-500 py-3 px-6 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-300"
                   >
-                    Ver Motos Disponíveis
+                    CONSULTAR AGORA
                   </button>
                   
                   <button
                     onClick={() => handleWhatsAppClick("Olá! Gostaria de informações sobre financiamento.")}
                     className="w-full border-2 border-white text-white py-3 px-6 rounded-lg font-semibold hover:bg-white hover:text-cs-red-500 transition-colors duration-300"
                   >
-                    Informações sobre Financiamento
+                    CONSULTAR AGORA
                   </button>
                 </div>
               </div>

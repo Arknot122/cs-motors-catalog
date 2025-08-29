@@ -75,7 +75,7 @@ const MobileMenu = ({ onWhatsAppClick }: MobileMenuProps) => {
               className="w-full mt-3 bg-green-500 hover:bg-green-600 text-white"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
-              Falar via WhatsApp
+              CONSULTAR AGORA
             </Button>
           </div>
         </nav>

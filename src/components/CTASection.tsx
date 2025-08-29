@@ -30,7 +30,7 @@ const CTASection = ({ onWhatsAppClick }: CTASectionProps) => {
           className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 md:px-8 md:py-4 text-base md:text-lg shadow-xl w-full sm:w-auto font-semibold transition-all duration-300 hover:shadow-2xl hover:scale-105 focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
         >
           <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-          Atendimento via WhatsApp
+          CONSULTAR AGORA
         </Button>
       </div>
     </section>
