@@ -13,7 +13,7 @@ const Header = ({ onWhatsAppClick }: HeaderProps) => {
         <div className="flex items-center justify-between">
           {/* Left: Desktop Navigation */}
           <div className="hidden lg:block">
-            <NavigationMenu onWhatsAppClick={onWhatsAppClick} />
+            <NavigationMenu />
           </div>
           
           {/* Center: Logo */}
