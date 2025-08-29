@@ -12,10 +12,11 @@ const FloatingWhatsApp = ({ onWhatsAppClick }: FloatingWhatsAppProps) => {
       <Button
         onClick={() => onWhatsAppClick("Olá! Vim do site e gostaria de falar sobre as motos disponíveis.")}
         size="lg"
-        className="bg-green-500 hover:bg-green-600 text-white rounded-full w-16 h-16 shadow-2xl border-4 border-white transition-all duration-300 hover:scale-110 animate-pulse hover:animate-none"
-        aria-label="Abrir WhatsApp"
+        className="bg-green-500 hover:bg-green-600 text-white rounded-full min-w-fit px-4 h-16 shadow-2xl border-4 border-white transition-all duration-300 hover:scale-110 animate-pulse hover:animate-none"
+        aria-label="Consultar Agora"
       >
-        <MessageCircle className="w-8 h-8" />
+        <MessageCircle className="w-6 h-6 mr-2" />
+        <span className="text-sm font-semibold">Consultar Agora</span>
       </Button>
       
       {/* Tooltip */}
