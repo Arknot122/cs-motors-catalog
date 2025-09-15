@@ -81,16 +81,6 @@ const Index = () => {
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda Biz 125 – 22/23 com 11.163 KM"
     },
     {
-      id: 10,
-      name: "Honda CG Fan 160 – 24/24",
-      km: "8.079",
-      price: "20.443,00",
-      installment12: "1.287,00",
-      installment18: "1.055,00",
-      image: "/lovable-uploads/ce61497f-2633-4ea9-9c52-96d4d7b3124f.png",
-      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Fan 160 – 24/24 com 8.079 KM"
-    },
-    {
       id: 11,
       name: "Honda CG Fan 160 24/24",
       km: "6.066",
