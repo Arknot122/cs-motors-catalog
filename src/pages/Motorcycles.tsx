@@ -42,16 +42,6 @@ const Motorcycles = () => {
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Titan 160 – 21/22 com 29.044 KM"
     },
     {
-      id: 7,
-      name: "Honda Biz 125 – 22/22",
-      km: "20.649",
-      price: "16.176,00",
-      installment12: "1.018,00",
-      installment18: "835,00",
-      image: "/lovable-uploads/1abed2dc-a2e0-4617-b4bd-059d2e7c68c4.png",
-      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda Biz 125 – 22/22 com 20.649 KM"
-    },
-    {
       id: 9,
       name: "Honda Biz 125 – 22/23",
       km: "11.163",
