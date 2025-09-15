@@ -61,16 +61,6 @@ const Index = () => {
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda Biz 125 – 22/22 com 20.649 KM"
     },
     {
-      id: 8,
-      name: "Yamaha YBR Factor 150 – 22/23",
-      km: "25.272",
-      price: "14.790,00",
-      installment12: "931,00",
-      installment18: "763,00",
-      image: "/lovable-uploads/3cf003fd-3754-487a-9822-03bd85d1afa7.png",
-      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Yamaha YBR Factor 150 – 22/23 com 25.272 KM"
-    },
-    {
       id: 9,
       name: "Honda Biz 125 – 22/23",
       km: "11.163",
