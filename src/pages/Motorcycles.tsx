@@ -80,16 +80,6 @@ const Motorcycles = () => {
       installment18: "978,00",
       image: "/lovable-uploads/866ad016-7a06-4680-bd09-5397b57b8b23.png",
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Titan 160 – 23/23 com 26.249 KM"
-    },
-    {
-      id: 15,
-      name: "Honda POP 100 – 24/25",
-      km: "38.098",
-      price: "10.934,00",
-      installment12: "688,00",
-      installment18: "564,00",
-      image: "/lovable-uploads/e5abba61-65c3-439b-af19-80014d2b7a60.png",
-      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda POP 100 – 24/25 com 38.098 KM"
     }
   ];
 
