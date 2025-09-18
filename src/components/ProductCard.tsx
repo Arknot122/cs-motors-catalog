@@ -64,13 +64,14 @@ const ProductCard = memo(({ motorcycle, onWhatsAppClick }: ProductCardProps) => 
         )}
       </div>
 
-      <div className="relative overflow-hidden bg-gray-50 flex items-center justify-center">
+      <div className="relative overflow-hidden bg-gray-50 flex items-center justify-center h-40 md:h-48">
         <OptimizedImage
           src={motorcycle.image}
           alt={motorcycle.name}
-          className="w-full h-40 md:h-48 transition-all duration-500 group-hover:scale-105"
+          className="w-full h-full transition-all duration-500 group-hover:scale-105"
           width={400}
-          height={300}
+          height={240}
+          priority
         />
         
         <div className="absolute top-2 md:top-3 right-2 md:right-3 bg-gradient-to-r from-cs-dark-800 to-cs-dark-900 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold shadow-lg backdrop-blur-sm">

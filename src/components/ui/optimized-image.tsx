@@ -60,7 +60,13 @@ const OptimizedImage = ({
     <div 
       ref={imgRef}
       className={cn("relative overflow-hidden", className)}
-      style={{ width, height }}
+      style={{ 
+        width: width || 'auto', 
+        height: height || 'auto',
+        minWidth: width || 'auto',
+        minHeight: height || 'auto',
+        aspectRatio: width && height ? `${width}/${height}` : 'auto'
+      }}
     >
       {/* Blur placeholder */}
       {!isLoaded && (
@@ -68,7 +74,9 @@ const OptimizedImage = ({
           className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
           style={{ 
             backgroundImage: `url(${blurDataURL})`,
-            backgroundColor: '#f3f4f6'
+            backgroundColor: '#f3f4f6',
+            width: '100%',
+            height: '100%'
           }}
         />
       )}
@@ -81,7 +89,7 @@ const OptimizedImage = ({
           width={width}
           height={height}
           className={cn(
-            "transition-opacity duration-300 w-full h-full object-contain object-center",
+            "transition-opacity duration-300 w-full h-full object-cover object-center",
             isLoaded ? "opacity-100" : "opacity-0",
             hasError && "hidden"
           )}
