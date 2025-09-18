@@ -7,8 +7,19 @@ import SkeletonCard from "@/components/ui/skeleton-card";
 
 const Footer = lazy(() => import("@/components/Footer"));
 
+interface Motorcycle {
+  id: number;
+  name: string;
+  km: string;
+  price: string;
+  installment12: string;
+  installment18: string;
+  image: string;
+  whatsappText: string;
+}
+
 const Motorcycles = () => {
-  const [filteredMotorcycles, setFilteredMotorcycles] = useState<typeof motorcycles>([]);
+  const [filteredMotorcycles, setFilteredMotorcycles] = useState<Motorcycle[]>([]);
   
   const motorcycles = [
     {
@@ -90,7 +101,7 @@ const Motorcycles = () => {
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedText}`, '_blank');
   }, [whatsappNumber]);
 
-  const handleFilteredResults = useCallback((filtered: typeof motorcycles) => {
+  const handleFilteredResults = useCallback((filtered: Motorcycle[]) => {
     setFilteredMotorcycles(filtered);
   }, []);
 

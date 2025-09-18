@@ -12,8 +12,19 @@ const CTASection = lazy(() => import("@/components/CTASection"));
 const ContactSection = lazy(() => import("@/components/ContactSection"));
 const Footer = lazy(() => import("@/components/Footer"));
 
+interface Motorcycle {
+  id: number;
+  name: string;
+  km: string;
+  price: string;
+  installment12: string;
+  installment18: string;
+  image: string;
+  whatsappText: string;
+}
+
 const Index = () => {
-  const [filteredMotorcycles, setFilteredMotorcycles] = useState<typeof motorcycles>([]);
+  const [filteredMotorcycles, setFilteredMotorcycles] = useState<Motorcycle[]>([]);
   
   // Performance monitoring
   usePerformanceMonitoring();
@@ -99,7 +110,7 @@ const Index = () => {
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedText}`, '_blank');
   }, [whatsappNumber]);
 
-  const handleFilteredResults = useCallback((filtered: typeof motorcycles) => {
+  const handleFilteredResults = useCallback((filtered: Motorcycle[]) => {
     setFilteredMotorcycles(filtered);
   }, []);
 
