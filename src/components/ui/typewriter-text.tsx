@@ -48,25 +48,33 @@ export const TypewriterText = ({
   }, [currentIndex, text, speed, hasStarted]);
 
   return (
-    <motion.span
-      className={className}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      {displayText}
-      {showCursor && (
-        <motion.span
-          className="inline-block w-0.5 h-[1em] bg-primary ml-1"
-          animate={{ opacity: [1, 0] }}
-          transition={{ 
-            duration: 0.8, 
-            repeat: Infinity, 
-            repeatType: "reverse",
-            ease: "easeInOut"
-          }}
-        />
-      )}
-    </motion.span>
+    <span className={className} style={{ position: 'relative' }}>
+      {/* Invisible full text to reserve space */}
+      <span style={{ visibility: 'hidden', position: 'absolute', top: 0, left: 0, width: '100%' }}>
+        {text}
+      </span>
+      
+      {/* Visible typewriter text */}
+      <motion.span
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        style={{ position: 'relative', zIndex: 1 }}
+      >
+        {displayText}
+        {showCursor && (
+          <motion.span
+            className="inline-block w-0.5 h-[1em] bg-primary ml-1"
+            animate={{ opacity: [1, 0] }}
+            transition={{ 
+              duration: 0.8, 
+              repeat: Infinity, 
+              repeatType: "reverse",
+              ease: "easeInOut"
+            }}
+          />
+        )}
+      </motion.span>
+    </span>
   );
 };

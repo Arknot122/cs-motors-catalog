@@ -5,15 +5,15 @@ const Hero = () => {
   return <AuroraBackground className="h-auto min-h-screen py-6 md:py-16">
       <motion.section initial={{
       opacity: 0.0,
-      y: 40
+      transform: "translateY(40px)"
     }} whileInView={{
       opacity: 1,
-      y: 0
+      transform: "translateY(0px)"
     }} transition={{
       delay: 0.3,
       duration: 0.8,
       ease: "easeInOut"
-    }} className="px-3 md:px-4 text-center text-foreground relative z-10 flex flex-col items-center justify-center min-h-[70vh] -mt-16 md:-mt-20">
+    }} className="px-3 md:px-4 text-center text-foreground relative z-10 flex flex-col items-center justify-center min-h-[70vh] -mt-16 md:-mt-20" style={{ willChange: 'transform, opacity' }}>
         <div className="container mx-auto max-w-5xl px-2 md:px-4">
           {/* Logo CS MOTOS */}
           <motion.div className="flex justify-center mb-2 md:mb-3" initial={{
@@ -44,14 +44,14 @@ const Hero = () => {
           {/* Feature Points */}
           <motion.div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm md:text-base px-2" initial={{
           opacity: 0,
-          y: 20
+          transform: "translateY(20px)"
         }} animate={{
           opacity: 1,
-          y: 0
+          transform: "translateY(0px)"
         }} transition={{
           delay: 2.5,
           duration: 0.6
-        }}>
+        }} style={{ willChange: 'transform, opacity' }}>
             <div className="flex items-center mb-2 md:mb-0">
               <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-primary rounded-full mr-2 md:mr-3 flex-shrink-0"></div>
               <span className="text-secondary font-medium">Motos Revisadas</span>
