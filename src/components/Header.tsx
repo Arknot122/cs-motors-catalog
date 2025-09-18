@@ -1,6 +1,7 @@
 import { Phone } from "lucide-react";
 import MobileMenu from "./MobileMenu";
 import NavigationMenu from "./NavigationMenu";
+import OptimizedImage from "./ui/optimized-image";
 
 interface HeaderProps {
   onWhatsAppClick?: (text: string) => void;
@@ -18,10 +19,13 @@ const Header = ({ onWhatsAppClick }: HeaderProps) => {
           
           {/* Center: Logo */}
           <div className="flex justify-center lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
-            <img 
+            <OptimizedImage
               alt="CS MOTOS Logo" 
               src="/lovable-uploads/ab727843-415e-4a73-808c-b54e53886e50.png" 
               className="h-12 md:h-16 w-auto object-contain" 
+              width={96}
+              height={64}
+              priority={true}
             />
           </div>
           
