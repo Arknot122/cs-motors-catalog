@@ -50,9 +50,16 @@ const OptimizedImage = ({
 
   // Convert PNG to WebP if supported and optimize sizing
   const getOptimizedSrc = (originalSrc: string) => {
-    // For very small logos, we can add query parameters to hint at desired size
-    if (width && height && (width <= 120 || height <= 64)) {
-      return originalSrc + `?w=${width}&h=${height}&f=webp&q=85`;
+    // For small images (logos, icons), aggressively optimize
+    if (width && height) {
+      // Always add optimization parameters for better compression and format conversion
+      const params = new URLSearchParams();
+      params.set('w', width.toString());
+      params.set('h', height.toString());
+      params.set('f', 'webp'); // Force WebP format for better compression
+      params.set('q', '85'); // High quality but compressed
+      params.set('fit', 'contain'); // Maintain aspect ratio
+      return originalSrc + '?' + params.toString();
     }
     return originalSrc;
   };
