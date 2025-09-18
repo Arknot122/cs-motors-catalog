@@ -23,13 +23,13 @@ const Motorcycles = () => {
     },
     {
       id: 2,
-      name: "Honda CG Titan 160 21/21",
+      name: "Honda CG Start - 21/22",
       km: "30.017",
       price: "16.721,00",
       installment12: "1.053,00",
       installment18: "863,00",
       image: "/lovable-uploads/9cf420ff-b473-49f4-9208-429e0f0a7ca9.png",
-      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Titan 160 21/21 com 30.017 KM"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Start - 21/22 com 30.017 KM"
     },
     {
       id: 3,
