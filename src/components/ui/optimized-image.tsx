@@ -105,7 +105,7 @@ const OptimizedImage = ({
           onError={() => setHasError(true)}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
-          fetchPriority={priority ? "high" : "auto"}
+          {...{ fetchpriority: priority ? "high" : "auto" }}
         />
       )}
       
