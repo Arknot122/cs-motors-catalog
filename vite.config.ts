@@ -22,11 +22,36 @@ export default defineConfig(({ mode }) => ({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-slot', '@radix-ui/react-toast'],
-          animation: ['framer-motion'],
-          router: ['react-router-dom']
+        manualChunks: (id) => {
+          // React core
+          if (id.includes('react') || id.includes('react-dom')) {
+            return 'react-vendor';
+          }
+          
+          // UI libraries
+          if (id.includes('@radix-ui') || id.includes('lucide-react')) {
+            return 'ui-vendor';
+          }
+          
+          // Animation libraries
+          if (id.includes('framer-motion')) {
+            return 'animation';
+          }
+          
+          // Router
+          if (id.includes('react-router')) {
+            return 'router';
+          }
+          
+          // Query and form libraries
+          if (id.includes('@tanstack') || id.includes('react-hook-form')) {
+            return 'data-vendor';
+          }
+          
+          // All other node_modules
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
         }
       }
     },
