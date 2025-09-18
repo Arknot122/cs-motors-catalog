@@ -38,7 +38,7 @@ const Hero = () => {
           delay: 0.8,
           duration: 0.6
         }}>
-            <TypewriterText text="Motos revisadas, com garantia e parcelamento facilitado. Confira abaixo nossos modelos disponíveis!" delay={400} speed={40} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight text-secondary max-w-4xl mx-auto block px-2" />
+            <TypewriterText text="Motos revisadas, com garantia e parcelamento facilitado. Confira abaixo nossos modelos disponíveis!" delay={0} speed={15} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight text-secondary max-w-4xl mx-auto block px-2" />
           </motion.div>
 
           {/* Feature Points */}
