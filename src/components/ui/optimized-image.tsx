@@ -48,10 +48,11 @@ const OptimizedImage = ({
     return () => observer.disconnect();
   }, [priority]);
 
-  // Convert PNG to WebP if supported
+  // Convert PNG to WebP if supported and optimize sizing
   const getOptimizedSrc = (originalSrc: string) => {
-    if (originalSrc.includes('.png') || originalSrc.includes('.jpg') || originalSrc.includes('.jpeg')) {
-      return originalSrc;
+    // For very small logos, we can add query parameters to hint at desired size
+    if (width && height && (width <= 120 || height <= 64)) {
+      return originalSrc + `?w=${width}&h=${height}&f=webp&q=85`;
     }
     return originalSrc;
   };
@@ -89,7 +90,7 @@ const OptimizedImage = ({
           width={width}
           height={height}
           className={cn(
-            "transition-opacity duration-300 w-full h-full object-cover object-center",
+            "transition-opacity duration-300 w-full h-full object-cover object-center max-w-full max-h-full",
             isLoaded ? "opacity-100" : "opacity-0",
             hasError && "hidden"
           )}
@@ -97,6 +98,7 @@ const OptimizedImage = ({
           onError={() => setHasError(true)}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
+          fetchPriority={priority ? "high" : "auto"}
         />
       )}
       
