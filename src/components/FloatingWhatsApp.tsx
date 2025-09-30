@@ -8,7 +8,14 @@ interface FloatingWhatsAppProps {
 
 const FloatingWhatsApp = ({ onWhatsAppClick }: FloatingWhatsAppProps) => {
   return (
-    <div className="fixed bottom-6 right-6 z-50 group">
+    <div 
+      className="fixed bottom-6 right-6 z-[9999] group"
+      style={{ 
+        position: 'fixed',
+        bottom: '1.5rem',
+        right: '1.5rem',
+      }}
+    >
       <Button
         onClick={() => onWhatsAppClick("Olá! Vim do site e gostaria de falar sobre as motos disponíveis.")}
         size="lg"
