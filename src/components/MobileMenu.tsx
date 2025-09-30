@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone, MessageCircle, Home, Car, Info, Mail } from "lucide-react";
+import { Menu, Phone, MessageCircle, Home, Bike, Car, Info, Mail } from "lucide-react";
 
 interface MobileMenuProps {
   onWhatsAppClick?: (text: string) => void;
@@ -11,10 +12,11 @@ const MobileMenu = ({ onWhatsAppClick }: MobileMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Início', href: '#inicio', icon: Home },
-    { label: 'Motos', href: '#motos', icon: Car },
-    { label: 'Sobre', href: '#sobre', icon: Info },
-    { label: 'Contato', href: '#contato', icon: Mail },
+    { label: 'Início', href: '/', icon: Home },
+    { label: 'Motos', href: '/motos', icon: Bike },
+    { label: 'Carros', href: '/carros', icon: Car },
+    { label: 'Sobre', href: '/sobre', icon: Info },
+    { label: 'Contato', href: '/contato', icon: Mail },
   ];
 
   const handleWhatsAppClick = () => {
@@ -25,12 +27,8 @@ const MobileMenu = ({ onWhatsAppClick }: MobileMenuProps) => {
     setIsOpen(false);
   };
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = () => {
     setIsOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   return (
@@ -54,14 +52,15 @@ const MobileMenu = ({ onWhatsAppClick }: MobileMenuProps) => {
         
         <nav className="mt-8 space-y-4">
           {menuItems.map((item) => (
-            <button
+            <Link
               key={item.label}
-              onClick={() => handleNavClick(item.href)}
+              to={item.href}
+              onClick={handleNavClick}
               className="flex items-center w-full p-3 text-left rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors duration-200"
             >
               <item.icon className="w-5 h-5 mr-3 text-primary" />
               <span className="font-medium">{item.label}</span>
-            </button>
+            </Link>
           ))}
           
           <div className="border-t border-border pt-4 mt-6">

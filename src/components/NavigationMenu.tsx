@@ -6,6 +6,7 @@ const NavigationMenu = () => {
   const menuItems = [
     { label: 'Início', href: '/' },
     { label: 'Motos', href: '/motos' },
+    { label: 'Carros', href: '/carros' },
     { label: 'Sobre', href: '/sobre' },
     { label: 'Contato', href: '/contato' },
   ];
