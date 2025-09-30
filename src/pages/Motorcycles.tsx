@@ -64,13 +64,13 @@ const Motorcycles = () => {
     },
     {
       id: 12,
-      name: "Honda CG Fan 160 – 23/23",
+      name: "Honda CG Fan 160 – 24/24",
       km: "18.258",
       price: "18.963,00",
       installment12: "1.194,00",
       installment18: "978,00",
       image: "/lovable-uploads/a7735d1a-3da4-4eb7-831e-5af2c9093d7a.png",
-      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Fan 160 – 23/23 com 18.258 KM"
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Fan 160 – 24/24 com 18.258 KM"
     },
     {
       id: 13,
