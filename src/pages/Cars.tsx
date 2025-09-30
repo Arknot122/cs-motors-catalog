@@ -22,7 +22,16 @@ const Cars = () => {
   const [filteredCars, setFilteredCars] = useState<Car[]>([]);
   
   const cars: Car[] = [
-    // Cars will be added here
+    {
+      id: 1,
+      name: "Renault Kwid Zen 2018",
+      km: "170.000",
+      price: "Consultar",
+      installment12: "Consultar",
+      installment18: "Consultar",
+      image: "/lovable-uploads/kwid-zen-2018-170mil-km.webp",
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre o Renault Kwid Zen 2018 com 170.000 KM"
+    }
   ];
 
   const whatsappNumber = "5562981660042";
