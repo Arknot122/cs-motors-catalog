@@ -82,6 +82,16 @@ const Index = () => {
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Fan 160 – 24/24 com 18.258 KM"
     },
     {
+      id: 14,
+      name: "Honda CG Titan 160 – 23/23",
+      km: "26.250",
+      price: "Consultar",
+      installment12: "Consultar",
+      installment18: "Consultar",
+      image: "/lovable-uploads/cg-titan-23-23-26250km.jpg",
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Titan 160 – 23/23 com 26.250 KM"
+    },
+    {
       id: 13,
       name: "Honda CG Titan 160 – 23/23",
       km: "52.000",
