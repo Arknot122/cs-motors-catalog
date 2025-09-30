@@ -83,6 +83,16 @@ const Motorcycles = () => {
       whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Titan 160 – 23/23 com 26.250 KM"
     },
     {
+      id: 15,
+      name: "Honda CG Start – 23/24",
+      km: "22.604",
+      price: "Consultar",
+      installment12: "Consultar",
+      installment18: "Consultar",
+      image: "/lovable-uploads/cg-start-23-24-22604km.webp",
+      whatsappText: "Olá! Vim do site e gostaria de saber sobre a Honda CG Start – 23/24 com 22.604 KM"
+    },
+    {
       id: 13,
       name: "Honda CG Titan 160 – 23/23",
       km: "52.000",
