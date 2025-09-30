@@ -19,42 +19,18 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom']
+  },
   build: {
     rollupOptions: {
       output: {
-        manualChunks: (id) => {
-          // React core
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor';
-          }
-          
-          // UI libraries
-          if (id.includes('@radix-ui') || id.includes('lucide-react')) {
-            return 'ui-vendor';
-          }
-          
-          // Animation libraries
-          if (id.includes('framer-motion')) {
-            return 'animation';
-          }
-          
-          // Router
-          if (id.includes('react-router')) {
-            return 'router';
-          }
-          
-          // Query and form libraries
-          if (id.includes('@tanstack') || id.includes('react-hook-form')) {
-            return 'data-vendor';
-          }
-          
-          // All other node_modules
-          if (id.includes('node_modules')) {
-            return 'vendor';
-          }
+        manualChunks: {
+          'vendor': ['react', 'react-dom', 'react-router-dom'],
         }
       }
     },
-    minify: 'esbuild'
+    minify: 'esbuild',
+    chunkSizeWarningLimit: 1000
   }
 }));

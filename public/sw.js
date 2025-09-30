@@ -1,9 +1,6 @@
-const CACHE_NAME = 'cs-motos-v2';
+const CACHE_NAME = 'cs-motos-v3';
 const urlsToCache = [
   '/',
-  '/src/main.tsx',
-  '/src/index.css',
-  // Preload critical motorcycle images
   '/lovable-uploads/6d509b8d-0dfe-491a-bad2-b57f6c3ea2ee.png',
   '/lovable-uploads/9cf420ff-b473-49f4-9208-429e0f0a7ca9.png',
   '/lovable-uploads/43a686dc-67c1-4c98-9eba-7813a4fbc2a7.png',
@@ -11,9 +8,24 @@ const urlsToCache = [
 ];
 
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => self.clients.claim())
   );
 });
 
